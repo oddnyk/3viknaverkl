@@ -7,3 +7,9 @@ Flying
 arn
 0
 None
+arnar
+2
+weakling
+arnar
+0
+None
