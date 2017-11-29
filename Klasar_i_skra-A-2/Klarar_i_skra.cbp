@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Klasar_i_skra" />
+		<Option title="Klarar_i_skra" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
