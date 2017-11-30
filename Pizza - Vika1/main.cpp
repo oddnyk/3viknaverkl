@@ -6,6 +6,7 @@
 #include "Welcomescreen.h"
 
 using namespace std;
+//oddny
 class DataClass {
 
 private:
