@@ -13,8 +13,10 @@ void Welcomescreen::welcomeUI(){
     char selection = '\0';
 
     while (selection != 'q'){
-        cout << "\t" << "Welcome to Pizza World" << endl << endl;
-        cout << "\t" << "Please select occupation: " << endl;
+        cout << "-----------------" << endl;
+        cout << "  Pizza World " << endl;
+        cout << "-----------------" << endl;
+        cout << "Please select occupation: " << endl;
 
         cout << "a: Admin" << endl;
         cout << "s: Salesperson" << endl;
@@ -25,8 +27,8 @@ void Welcomescreen::welcomeUI(){
         cin >> selection;
         if (selection == 'a'){
             MainUI mainui;
-
             mainui.startUI();
+
         cout << endl;
         }
         if (selection == 's'){
