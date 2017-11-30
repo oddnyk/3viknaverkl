@@ -4,6 +4,8 @@
 #include <iostream>
 #include "AdminUI.h"
 #include "MainUI.h"
+#include "BakerUI.h"
+#include "DeliveryUI.h"
 using namespace std;
 
 class Welcomescreen
@@ -12,6 +14,8 @@ class Welcomescreen
         Welcomescreen();
         virtual ~Welcomescreen();
         void welcomeUI();
+        void clearScreen();
+
 
     protected:
 

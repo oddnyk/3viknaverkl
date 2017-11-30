@@ -18,6 +18,7 @@ void PizzaUI::startUI() {
 
     cout << "m: make pizza" << endl;
     cout << "r: read pizza" << endl;
+    cout << "q: quit to menu" << endl;
 
     cin >> selection;
     if (selection == 'm') {
@@ -48,5 +49,9 @@ void PizzaUI::startUI() {
 
 
     }
-
+    else if (selection == 'q'){
+            Welcomescreen welcomescreen;
+            welcomescreen.welcomeUI();
+    cout << endl;
+    }
 }

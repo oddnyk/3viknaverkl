@@ -6,6 +6,8 @@
 #include "Welcomescreen.h"
 using namespace std;
 
+///Held að við munum henda þessum klasa út að lokum en hef hann inni í bili. -Arnar
+
 MainUI::MainUI()
 {
     //ctor

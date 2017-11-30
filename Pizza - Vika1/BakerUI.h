@@ -1,21 +1,20 @@
-#ifndef ADMINUI_H
-#define ADMINUI_H
-#include "Pizzaui.h"
+#ifndef BAKERUI_H
+#define BAKERUI_H
 #include "Welcomescreen.h"
 #include <string>
 #include <iostream>
 using namespace std;
 
-class AdminUI
+class BakerUI
 {
     public:
-        AdminUI();
+        BakerUI();
         void startUI();
-        virtual ~AdminUI();
+        virtual ~BakerUI();
 
     protected:
 
     private:
 };
 
-#endif // ADMINUI_H
+#endif // BAKERUI_H

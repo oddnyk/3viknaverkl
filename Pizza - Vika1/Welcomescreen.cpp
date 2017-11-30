@@ -1,5 +1,5 @@
 #include "Welcomescreen.h"
-
+#include "SalesUI.h"
 Welcomescreen::Welcomescreen()
 {
     //ctor
@@ -9,37 +9,51 @@ Welcomescreen::~Welcomescreen()
 {
     //dtor
 }
-void Welcomescreen::welcomeUI(){
+void Welcomescreen::welcomeUI() {
     char selection = '\0';
 
-    while (selection != 'q'){
+    while (selection != 'q') {
+        clearScreen();
         cout << "-----------------" << endl;
         cout << "  Pizza World " << endl;
         cout << "-----------------" << endl;
-        cout << "Please select occupation: " << endl;
+        cout << endl;
 
-        cout << "a: Admin" << endl;
-        cout << "s: Salesperson" << endl;
-        cout << "b: Baker" << endl;
-        cout << "d: delivery" << endl;
-        cout << "q: quit" << endl;
+
+        cout << "A: Admin" << endl;
+        cout << "S: Salesperson" << endl;
+        cout << "B: Baker" << endl;
+        cout << "D: Delivery" << endl;
+        cout << "Q: Quit" << endl;
 
         cin >> selection;
-        if (selection == 'a'){
-            MainUI mainui;
-            mainui.startUI();
+        if (selection == 'a' || selection == 'A') {
+            AdminUI adminUI;
+            adminUI.startUI();
+        }
+        if (selection == 's' || selection == 'S') {
+            SalesUI salesUI;
+            salesUI.startUI();
 
-        cout << endl;
         }
-        if (selection == 's'){
-        cout << endl;
+        if (selection == 'b' || selection == 'B') {
+            BakerUI bakerUI;
+            bakerUI.startUI();
         }
-        if (selection == 'd'){
-        cout << endl;
+        if (selection == 'd' || selection == 'D') {
+            DeliveryUI deliveryUI;
+            deliveryUI.startUI();
         }
-        else if (selection == 'q'){
-        cout << endl;
+        else if (selection == 'q' || selection == 'Q') {
+            cout << endl;
         }
     }
+}
 
+void Welcomescreen::clearScreen()
+{
+    for(int i = 0; i < 50; i++)
+    {
+        cout << endl;
+    }
 }

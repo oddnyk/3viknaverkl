@@ -1,16 +1,18 @@
-#include "SalesUI.h"
+#include "BakerUI.h"
+#include <string>
+#include <iostream>
+using namespace std;
 
-SalesUI::SalesUI()
+BakerUI::BakerUI()
 {
     //ctor
 }
 
-SalesUI::~SalesUI()
+BakerUI::~BakerUI()
 {
     //dtor
 }
-
-void SalesUI::startUI() {
+void BakerUI::startUI() {
     char selection = '\0';
 
     while (selection != 'q'){
@@ -19,27 +21,24 @@ void SalesUI::startUI() {
         {
             cout << endl;
         }
-        cout << "SALES MENU" << endl << endl;
-        cout << "o: Make order" << endl;
-        cout << "p: Get price" << endl;
-        cout << "d: Delivery or pickup" << endl;
-        cout << "n: Notes" << endl;
+        cout << "BAKERS MENU" << endl << endl;
+        cout << "P: Pizza queue" << endl;
+        cout << "N: List of ordered pizza's" << endl;
+        cout << "P: Mark as in progress" << endl;
+        cout << "R: Mark as ready" << endl;
         cout << "q: quit to menu" << endl;
 
         cin >> selection;
-        if (selection == 'o' || selection == 'O'){
+        if (selection == 'p' || selection == 'P'){
+        cout << endl;
+        }
+        if (selection == 'n' || selection == 'N'){
         cout << endl;
         }
         if (selection == 'p' || selection == 'P'){
         cout << endl;
         }
-        if (selection == 'b' || selection == 'B'){
-        cout << endl;
-        }
-        if (selection == 'd' || selection == 'D'){
-        cout << endl;
-        }
-        if (selection == 'n' || selection == 'N'){
+        if (selection == 'r' || selection == 'R'){
         cout << endl;
         }
         else if (selection == 'q' || selection == 'Q'){
@@ -49,4 +48,3 @@ void SalesUI::startUI() {
         }
     }
 }
-
