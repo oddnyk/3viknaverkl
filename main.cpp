@@ -1,48 +1,47 @@
 //
 //  main.cpp
-//  Superhero.a
+//  textaskrar2
 //
 //  Created by Oddný Karen Arnardóttir on 29/11/2017.
 //  Copyright © 2017 Oddný Karen Arnardóttir. All rights reserved.
 //
 
 #include <iostream>
-#include "superhero.hpp"
+#include <fstream>
+#include <string>
+using namespace std;
 
 int main() {
     
-    Superhero superhero;
-    superhero.set_verbose(true);
-    cin >> superhero;
-    
-    
+    string str;
+    string invalid_car = "\\";
     ofstream fout;
-    fout.open("/Users/OddnyKaren/Desktop/superhero.txt",ios::app);
+    bool run = true;
     
-    superhero.set_verbose(false);
+    fout.open("/Users/OddnyKaren/Desktop/skrifaiskra.txt", ios::app);
     
-    fout << superhero;
-    fout.close();
+    if (fout.is_open()) {
+        
+        do {
+            getline(cin, str);
+            for (unsigned int i = 0; i < str.length(); i++) {
+                for (unsigned int j = 0; j < invalid_car.length(); j++) {
+                    if (str[i] == invalid_car[j]) {
+                      fout.close();
+                      run = false;
+                    }
+                }
+            }
+            fout << str << endl;
+        
+        } while (run);
     
-    
-    Superhero superhero2;
-    
-    ifstream fin;
-    fin.open("/Users/OddnyKaren/Desktop/superhero.txt");
-    
-    superhero2.set_verbose(false);
-    
-    if(fin.is_open()) {
-        fin >> superhero2;
     }
-    
     else {
         cout << "Unable to open file" << endl;
     }
     
-    superhero2.set_verbose(true);
-    
-    cout << superhero2;
+    fout.close();
     
     return 0;
 }
