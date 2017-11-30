@@ -9,7 +9,7 @@ class SalesUI
 {
     public:
         SalesUI();
-        void startUI;
+      //  void startUI;
         virtual ~SalesUI();
 
     protected:

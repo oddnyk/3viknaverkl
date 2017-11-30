@@ -9,6 +9,7 @@ SalesUI::~SalesUI()
 {
     //dtor
 }
+/*
 void SalesUI::startUI(){
     char selection = '\0';
 
@@ -41,3 +42,4 @@ void SalesUI::startUI(){
     }
 
 }
+*/
