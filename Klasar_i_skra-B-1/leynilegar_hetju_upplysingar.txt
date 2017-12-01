@@ -13,3 +13,6 @@ weakling
 arnar
 0
 None
+Batman
+2343
+Flying
