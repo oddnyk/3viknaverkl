@@ -50,17 +50,15 @@ ostream& operator << (ostream& out, const Superhero& superhero) {
     if (superhero.verbose){
         out << "(";
     }
-    
     out << superhero._aldur;
     
     if (superhero.verbose) {
         out << "): ";
     }
-    
     if(superhero._ofurkraftur == 'f') {
         out << "Flying" << endl;
     }
-    else if (superhero._ofurkraftur == 'g') {
+    else if(superhero._ofurkraftur == 'g') {
         out << "Giant" << endl;
     }
     else if (superhero._ofurkraftur == 'h') {
